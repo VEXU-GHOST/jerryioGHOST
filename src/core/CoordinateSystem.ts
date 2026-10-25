@@ -112,6 +112,19 @@ export interface NamedCoordinateSystem extends CoordinateSystem {
 export function getNamedCoordinateSystems(): NamedCoordinateSystem[] {
   return [
     {
+      name: "GHOST ROS coordinates",
+      description: "90 degrees is where the driver is facing, 0,0 is a the back right corner. ",
+      previewImageUrl: "",
+      axisAnchor: AxisAnchor.Default,
+      axisRotation: AxisRotation.XNorthYWest,
+      yAxisFlip: YAxisFlip.NoFlip,
+      headingAnchor: HeadingAnchor.Default,
+      headingRotation: HeadingRotation.North,
+      headingDirection: HeadingDirection.CounterClockwise,
+      originAnchor: OriginAnchor.FieldCenter,
+      originOffset: { x: -3, y: -3 }
+    },
+    {
       name: "VEX Gaming Positioning System",
       description: "The standard coordinate system defined by VEX Robotics.",
       previewImageUrl: "static/coordinate-system-preview-vex-gps.png",
@@ -165,19 +178,6 @@ export function getNamedCoordinateSystems(): NamedCoordinateSystem[] {
       headingDirection: HeadingDirection.Clockwise,
       originAnchor: OriginAnchor.PathBeginning,
       originOffset: { x: 0, y: 0 }
-    },
-    {
-      name: "GHOST ROS coordinates",
-      description: "90 degrees is where the driver is facing, 0,0 is a the back right corner. ",
-      previewImageUrl: "",
-      axisAnchor: AxisAnchor.Default,
-      axisRotation: AxisRotation.XNorthYWest,
-      yAxisFlip: YAxisFlip.NoFlip,
-      headingAnchor: HeadingAnchor.Default,
-      headingRotation: HeadingRotation.North,
-      headingDirection: HeadingDirection.CounterClockwise,
-      originAnchor: OriginAnchor.FieldCenter,
-      originOffset: { x: -3, y: -3 }
     }
   ];
 }

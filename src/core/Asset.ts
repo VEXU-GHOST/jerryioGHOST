@@ -557,5 +557,5 @@ const builtInAssets: FieldImageAsset<FieldImageOriginType>[] = [
 ];
 
 export function getDefaultBuiltInFieldImage(): FieldImageAsset<FieldImageOriginType> {
-  return builtInAssets[0];
+  return builtInAssets.find(asset => asset.displayName === "VURC 2027 - Override") ?? builtInAssets[0];
 }

@@ -135,7 +135,7 @@ export class GeneralConfigImpl implements GeneralConfig {
   showRobot: boolean = false;
   @ValidateNumber(num => num > 0 && num <= 1000) // Don't use IsEnum
   @Expose()
-  uol: UnitOfLength = UnitOfLength.Centimeter;
+  uol: UnitOfLength = UnitOfLength.Tile;
   @IsPositive()
   @Expose()
   pointDensity: number = 2;
@@ -150,7 +150,7 @@ export class GeneralConfigImpl implements GeneralConfig {
     getDefaultBuiltInFieldImage().getSignatureAndOrigin();
   @IsIn(getNamedCoordinateSystems().map(s => s.name))
   @Expose()
-  coordinateSystem: string = "VEX Gaming Positioning System";
+  coordinateSystem: string = "GHOST ROS coordinates";
   @IsEnum(HeadingOutputType)
   @Expose()
   headingOutputType: HeadingOutputType = HeadingOutputType.Absolute;
