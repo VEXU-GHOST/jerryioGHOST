@@ -101,10 +101,10 @@ const GeneralConfigPanel = observer((props: { config: GeneralConfigImpl }) => {
 export class GeneralConfigImpl implements GeneralConfig {
   @IsPositive()
   @Expose()
-  robotWidth: number = 30;
+  robotWidth: number = 0.5; // tiles
   @IsPositive()
   @Expose()
-  robotHeight: number = 30;
+  robotHeight: number = 0.5; // tiles
   @Exclude()
   readonly robotIsHolonomic = "force-holonomic";
   @IsBoolean()
@@ -115,10 +115,10 @@ export class GeneralConfigImpl implements GeneralConfig {
   uol: UnitOfLength = UnitOfLength.Tile;
   @IsPositive()
   @Expose()
-  pointDensity: number = 2;
+  pointDensity: number = 0.033; // tiles
   @IsPositive()
   @Expose()
-  controlMagnetDistance: number = 5;
+  controlMagnetDistance: number = 0.082; // tiles
   @Type(() => FieldImageSignatureAndOrigin)
   @ValidateNested()
   @IsObject()

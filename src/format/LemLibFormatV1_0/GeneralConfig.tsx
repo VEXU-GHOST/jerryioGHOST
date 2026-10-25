@@ -12,10 +12,10 @@ import { getNamedCoordinateSystems } from "@src/core/CoordinateSystem";
 export class GeneralConfigImpl implements GeneralConfig {
   @IsPositive()
   @Expose()
-  robotWidth: number = 300;
+  robotWidth: number = 0.5; // tiles
   @IsPositive()
   @Expose()
-  robotHeight: number = 300;
+  robotHeight: number = 0.5; // tiles
   @IsBoolean()
   @Expose()
   robotIsHolonomic: boolean = false;
@@ -27,10 +27,10 @@ export class GeneralConfigImpl implements GeneralConfig {
   uol: UnitOfLength = UnitOfLength.Tile;
   @IsPositive()
   @Expose()
-  pointDensity: number = 20; // mm
+  pointDensity: number = 0.033; // tiles
   @IsPositive()
   @Expose()
-  controlMagnetDistance: number = 50;
+  controlMagnetDistance: number = 0.082; // tiles
   @Type(() => FieldImageSignatureAndOrigin)
   @ValidateNested()
   @IsObject()
