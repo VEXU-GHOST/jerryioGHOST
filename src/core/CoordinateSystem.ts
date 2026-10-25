@@ -174,8 +174,8 @@ export function getNamedCoordinateSystems(): NamedCoordinateSystem[] {
       axisRotation: AxisRotation.XNorthYWest,
       yAxisFlip: YAxisFlip.NoFlip,
       headingAnchor: HeadingAnchor.Default,
-      headingRotation: HeadingRotation.South,
-      headingDirection: HeadingDirection.Clockwise,
+      headingRotation: HeadingRotation.North,
+      headingDirection: HeadingDirection.CounterClockwise,
       originAnchor: OriginAnchor.FieldCenter,
       originOffset: { x: -3, y: -3 }
     }
